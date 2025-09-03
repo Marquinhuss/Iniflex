@@ -7,6 +7,7 @@ import com.inflex.Controller.Controlador;
 import com.inflex.Models.Funcionario;
 
 public class Main {
+    
     public static void main(String[] args) {
         System.out.println("Hello world!");
 

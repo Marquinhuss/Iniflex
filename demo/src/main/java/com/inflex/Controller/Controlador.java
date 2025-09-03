@@ -42,14 +42,14 @@ public class Controlador {
         if(funcionarios.isEmpty()){
             System.out.println("A lista de funcionários está vazia, por favor alimentar a lista");
         }
-        for (Funcionario funcionario : funcionarios) {
-            String salarioFormatado = formatoBrasileiro.format(funcionario.getSalario());
+        funcionarios.forEach( f-> {
+            String salarioFormatado = formatoBrasileiro.format(f.getSalario());
             System.out.printf("%s, %s, %s, %s%n",
-                    funcionario.getNome(),
-                    funcionario.getDataNascimento().format(formatter),
+                    f.getNome(),
+                    f.getDataNascimento().format(formatter),
                     salarioFormatado,
-                    funcionario.getFuncao());
-        }
+                    f.getFuncao());
+        });
     }
 
     public void aumentarSalario10(List<Funcionario> funcionarios) {
